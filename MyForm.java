@@ -7,8 +7,8 @@ public class MyForm extends JFrame{
     private JPanel MyPanel;
     private JSpinner speedSpin;
     private JSlider maxPowerSlider;
-    private JComboBox lengthBox;
-    private JComboBox heightBox;
+    private JComboBox<Integer> lengthBox;
+    private JComboBox<Integer> heightBox;
     private JProgressBar powerBar;
     private JLabel maxPowerLabel;
     private JButton startButton;
@@ -18,12 +18,14 @@ public class MyForm extends JFrame{
     private void start(){
         mountaineer = new Mountaineer((int)speedSpin.getValue(),maxPowerSlider.getValue());
         climbButton.setEnabled(true);
+        powerBar.setValue(mountaineer.getPower());
     }
 
     private void climb(){
         climbButton.setEnabled(false);
         restButton.setEnabled(true);
-        outLabel.setText(mountaineer.climb() + "    " + mountaineer.getPower());
+        outLabel.setText(mountaineer.climb());
+        powerBar.setValue(mountaineer.getPower());
         if(mountaineer.getPower() <= 0){
             this.rest();
         }
@@ -32,7 +34,8 @@ public class MyForm extends JFrame{
     private void rest(){
         climbButton.setEnabled(true);
         restButton.setEnabled(false);
-        outLabel.setText(mountaineer.rest() + "     " + mountaineer.getPower());
+        outLabel.setText(mountaineer.rest());
+        powerBar.setValue(mountaineer.getPower());
     }
 
     private void action(){
