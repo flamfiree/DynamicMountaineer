@@ -2,8 +2,25 @@ import javax.swing.*;
 
 public class Mountaineer {
 
-    public int power = 50;
-    public final int speed = 30;
+    public int getPower() {
+        return power;
+    }
+    public void setPower(int power) {
+        if(power <= 0){
+            this.power = 0;
+            rest();
+        }
+        else this.power = Math.min(power, maxPower);
+    }
+
+    private final int maxPower;
+    private int power;
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public final int speed;
 
     public IMountaineerState getMountaineer() {
         return mountaineer;
@@ -13,9 +30,11 @@ public class Mountaineer {
     }
     private IMountaineerState mountaineer;
 
-    public Mountaineer() {
+    public Mountaineer(int speed, int maxPower) {
+        this.speed = speed;
+        this.maxPower = maxPower;
+        this.power = maxPower;
         this.mountaineer = new RestMount();
-//        timer.start();
     }
     public String climb(){
         return mountaineer.climbing(this);
@@ -23,5 +42,4 @@ public class Mountaineer {
     public String rest(){
         return mountaineer.resting(this);
     }
-
 }
