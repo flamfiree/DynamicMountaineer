@@ -6,13 +6,28 @@ public class MyForm extends JFrame{
     private JLabel outLabel;
     private JPanel MyPanel;
 
-    Mountaineer mountaineer = new Mountaineer(new RestMount());
+    Mountaineer mountaineer = new Mountaineer();
     private void climb(){
-        outLabel.setText(mountaineer.climb() + "    \n" + mountaineer.getMountaineer().toString());
+        outLabel.setText(mountaineer.climb() + "    \n" + mountaineer.power);
+        if(mountaineer.power <= 0){
+            this.rest();
+        }
+        timer.start();
     }
     private void rest(){
-        outLabel.setText(mountaineer.rest() + "     \n" + mountaineer.getMountaineer().toString());
+        outLabel.setText(mountaineer.rest() + "     \n" + mountaineer.power);
     }
+
+    private void action(){
+        if(mountaineer.getMountaineer().getClass() == RestMount.class){
+            this.rest();
+        }
+        if(mountaineer.getMountaineer().getClass() == ClimbMount.class){
+            this.climb();
+        }
+    }
+
+    public Timer timer = new Timer(1000,e -> action());
 
     public MyForm(){
         this.setVisible(true);

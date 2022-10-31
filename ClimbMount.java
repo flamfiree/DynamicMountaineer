@@ -4,13 +4,13 @@ public class ClimbMount implements IMountaineerState{
     }
     @Override
     public String climbing(Mountaineer mountaineer) {
-        System.out.println("Still climbing");
+        mountaineer.power--;
         return "Still climbing";
     }
     @Override
     public String resting(Mountaineer mountaineer) {
         mountaineer.setMountaineer(new RestMount());
-        System.out.println("Climb -> Rest");
+        mountaineer.power++;
         return "Climb -> Rest";
     }
 }

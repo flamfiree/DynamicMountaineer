@@ -1,4 +1,10 @@
+import javax.swing.*;
+
 public class Mountaineer {
+
+    public int power = 50;
+    public final int speed = 30;
+
     public IMountaineerState getMountaineer() {
         return mountaineer;
     }
@@ -7,8 +13,9 @@ public class Mountaineer {
     }
     private IMountaineerState mountaineer;
 
-    public Mountaineer(IMountaineerState mountaineer) {
-        this.mountaineer = mountaineer;
+    public Mountaineer() {
+        this.mountaineer = new RestMount();
+//        timer.start();
     }
     public String climb(){
         return mountaineer.climbing(this);
@@ -16,4 +23,5 @@ public class Mountaineer {
     public String rest(){
         return mountaineer.resting(this);
     }
+
 }
