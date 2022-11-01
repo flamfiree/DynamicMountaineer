@@ -1,14 +1,7 @@
-public class RestMount implements IMountaineerState{
-    @Override
-    public String climbing(Mountaineer mountaineer) {
-        mountaineer.setMountaineer(new ClimbMount());
-        mountaineer.setPower(mountaineer.getPower() - 1);
-        return "Rest -> Climb";
-    }
-
+public class RestMount extends State {
     @Override
     public String resting(Mountaineer mountaineer) {
-        mountaineer.setPower(mountaineer.getPower() + 1);
-        return "Still resting";
+        mountaineer.setPower(mountaineer.getPower() + 2);
+        return "Resting";
     }
 }
