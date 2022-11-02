@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.io.PrintStream;
 import java.util.Objects;
 
 public class MyForm extends JFrame{
@@ -17,8 +18,31 @@ public class MyForm extends JFrame{
     private JLabel lengthOutLabel;
     private JLabel heightOutLabel;
     private JLabel timeLabel;
+    private JSlider timeSlider;
+    private JLabel timeCoefLabel;
+    private JLabel speedTextLabel;
+    private JLabel powerTextLabel;
+    private JLabel lengthTextLabel;
+    private JLabel heightTextLabel;
 
     Mountaineer mountaineer;
+
+    private void enableStart(){
+        speedTextLabel.setEnabled(false);
+        speedSpin.setEnabled(false);
+
+        powerTextLabel.setEnabled(false);
+        maxPowerLabel.setEnabled(false);
+        maxPowerSlider.setEnabled(false);
+
+        lengthTextLabel.setEnabled(false);
+        lengthBox.setEnabled(false);
+
+        heightTextLabel.setEnabled(false);
+        heightBox.setEnabled(false);
+
+        startButton.setEnabled(false);
+    }
 
     //The method linked to the button 'startButton'
     private void start(){
@@ -29,6 +53,7 @@ public class MyForm extends JFrame{
         climbButton.setEnabled(true);
         powerBar.setValue(mountaineer.getPower());
         time = 0;
+        enableStart();
     }
 
     private void climb(){
@@ -48,19 +73,23 @@ public class MyForm extends JFrame{
         powerBar.setValue(mountaineer.getPower());
     }
 
-    int time = 0;
+    double time = 0;
     private void action(){
-//        timer.setDelay(1000*(Hill.length/mountaineer.speed));
+        timer.setDelay((int) (1000 / (timeSlider.getValue()/50.000)));
+
         if(mountaineer.getState().getClass() == RestMount.class){
             this.rest();
         }
         if(mountaineer.getState().getClass() == ClimbMount.class){
             this.climb();
         }
-        lengthOutLabel.setText(String.valueOf(mountaineer.getPoint().x));
-        heightOutLabel.setText(String.valueOf(mountaineer.getPoint().y));
+        if(Objects.equals(mountaineer.getState().climbing(mountaineer), "End")) timer.stop();
+//        lengthOutLabel.setText("Passed way: " + mountaineer.getPoint().x);
+
+        lengthOutLabel.setText(String.format("Passed way: %.2f",mountaineer.getPoint().x));
+        heightOutLabel.setText(String.format("Current height: %.2f",mountaineer.getPoint().y));
         time++;
-        timeLabel.setText("Time since the beginning of the climbing: " + time);
+        timeLabel.setText("Time: " + time);
     }
 
     public Timer timer = new Timer(1000,e -> action());
@@ -100,5 +129,13 @@ public class MyForm extends JFrame{
         maxPowerSlider.setMajorTickSpacing(10);
         maxPowerSlider.setMinorTickSpacing(5);
         maxPowerSlider.addChangeListener( e -> maxPowerLabel.setText(" = " + maxPowerSlider.getValue()));
+
+        timeSlider = new JSlider(1,100,50);
+        timeSlider.setPaintTrack(true);
+        timeSlider.setPaintTicks(true);
+        timeSlider.setPaintLabels(true);
+        timeSlider.setMajorTickSpacing(10);
+        timeSlider.setMinorTickSpacing(5);
+        timeSlider.addChangeListener( e -> timeCoefLabel.setText("Coefficient =  " + timeSlider.getValue()));
     }
 }
