@@ -1,4 +1,16 @@
 # Event-driver_prog_model
+Task description
+Develop a JAVA program using a graphical user
+interface to control the simulation of a dynamic process.
+Modeling parameters must be set before enabling process modeling.
+After enabling the interface elements responsible for the simulation parameters, it is necessary
+to lock (unlock again at the end).
+Provide for the possibility of accelerating and slowing down the simulation time to
+study slow- or fast-flowing processes.
+In addition to using the standard graphical elements of the Swing library,
+program the visualization of a dynamic process using custom
+graphics.
+
 My task: A mountain tourist goes in one direction at a constant speed. He has
 a certain reserve of strength, which is consumed during movement. When the zero
 value is reached, it automatically stops to rest. During the rest, the reserve of strength can
