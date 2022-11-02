@@ -10,7 +10,7 @@
     <children>
       <component id="d0798" class="javax.swing.JButton" binding="climbButton">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -19,51 +19,34 @@
       </component>
       <component id="a7ee4" class="javax.swing.JButton" binding="restButton" default-binding="true">
         <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
           <text value="Rest"/>
         </properties>
       </component>
-      <component id="91256" class="javax.swing.JLabel" binding="outLabel">
+      <component id="b7938" class="javax.swing.JLabel" binding="powerTextLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="14"/>
-          <text value="Label"/>
-        </properties>
-      </component>
-      <component id="b7938" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
           <text value="Max power reserve:"/>
         </properties>
       </component>
-      <component id="7bdbd" class="javax.swing.JLabel">
+      <component id="7bdbd" class="javax.swing.JLabel" binding="speedTextLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
-          <text value="Speed"/>
-        </properties>
-      </component>
-      <component id="d4dbf" class="javax.swing.JSpinner" binding="speedSpin" custom-create="true">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="JetBrains Mono" size="14"/>
+          <text value="Speed:"/>
         </properties>
       </component>
       <component id="e66c" class="javax.swing.JLabel" binding="maxPowerLabel">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -72,15 +55,15 @@
       </component>
       <component id="16e99" class="javax.swing.JSlider" binding="maxPowerSlider" custom-create="true">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
         </properties>
       </component>
-      <component id="5059f" class="javax.swing.JLabel">
+      <component id="5059f" class="javax.swing.JLabel" binding="lengthTextLabel">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -89,15 +72,15 @@
       </component>
       <component id="890f1" class="javax.swing.JComboBox" binding="lengthBox" custom-create="true">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
         </properties>
       </component>
-      <component id="34f10" class="javax.swing.JLabel">
+      <component id="34f10" class="javax.swing.JLabel" binding="heightTextLabel">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -106,7 +89,7 @@
       </component>
       <component id="fa931" class="javax.swing.JComboBox" binding="heightBox" custom-create="true">
         <constraints>
-          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -114,7 +97,7 @@
       </component>
       <component id="e33b7" class="javax.swing.JProgressBar" binding="powerBar">
         <constraints>
-          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
@@ -150,11 +133,56 @@
       </component>
       <component id="9c5f1" class="javax.swing.JButton" binding="startButton" default-binding="true">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="JetBrains Mono" size="14"/>
           <text value="Start!"/>
+        </properties>
+      </component>
+      <component id="91256" class="javax.swing.JLabel" binding="outLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5ca53" class="javax.swing.JSlider" binding="timeSlider" custom-create="true">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <paintLabels value="true"/>
+          <paintTicks value="true"/>
+          <paintTrack value="true"/>
+        </properties>
+      </component>
+      <component id="964b0" class="javax.swing.JLabel" binding="timeCoefLabel">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14"/>
+          <text value="___"/>
+        </properties>
+      </component>
+      <component id="6e057" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14"/>
+          <text value="Power:"/>
+        </properties>
+      </component>
+      <component id="d4dbf" class="javax.swing.JSpinner" binding="speedSpin" custom-create="true">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="JetBrains Mono" size="14"/>
         </properties>
       </component>
     </children>
