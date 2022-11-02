@@ -1,4 +1,5 @@
-# Event-driver_prog_model
+# EventDriverProgModel
+
 Task description
 Develop a JAVA program using a graphical user
 interface to control the simulation of a dynamic process.
