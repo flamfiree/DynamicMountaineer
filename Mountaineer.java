@@ -34,10 +34,10 @@ public class Mountaineer {
     public void setPoint(Point2D.Double point) {
         if(point.x >= Hill.length) point.x = Hill.length;
         if(point.y >= Hill.height) point.y = Hill.height;
+        if(point.y <= 0) point.y = 0;
         this.point = point;
     }
     private Point2D.Double point;
-
 
     public State getState() {
         return state;
