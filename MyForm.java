@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.io.PrintStream;
 import java.util.Objects;
 
 public class MyForm extends JFrame{
@@ -76,7 +75,6 @@ public class MyForm extends JFrame{
     double time = 0;
     private void action(){
         timer.setDelay((int) (1000 / (timeSlider.getValue()/50.000)));
-
         if(mountaineer.getState().getClass() == RestMount.class){
             this.rest();
         }
@@ -84,8 +82,6 @@ public class MyForm extends JFrame{
             this.climb();
         }
         if(Objects.equals(mountaineer.getState().climbing(mountaineer), "End")) timer.stop();
-//        lengthOutLabel.setText("Passed way: " + mountaineer.getPoint().x);
-
         lengthOutLabel.setText(String.format("Passed way: %.2f",mountaineer.getPoint().x));
         heightOutLabel.setText(String.format("Current height: %.2f",mountaineer.getPoint().y));
         time++;
@@ -97,6 +93,7 @@ public class MyForm extends JFrame{
     public MyForm(){
         this.setVisible(true);
         this.setContentPane(MyPanel);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(600,500);
 
         climbButton.setEnabled(false);
